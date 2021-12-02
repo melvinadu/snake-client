@@ -7,7 +7,7 @@ const setupInput = (conn) => {
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-  
+
   stdin.on("data", (key) => {
     process.stdout.write(".");
     if (key === "\u0003") {
@@ -21,7 +21,7 @@ const setupInput = (conn) => {
     } else if (key === "d") {
       connection.write("Move: right");
     } else if (key === "h") {
-      connection.write("Say: Hello!");
+      connection.write("Say: Sup!");
     }
   });
 
